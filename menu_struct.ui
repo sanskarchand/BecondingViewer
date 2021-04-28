@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <menu id="app-menu">
+    <section>
+      <item>
+        <attribute name="action">win.open-file</attribute>
+        <attribute name="label" translatable="yes">Open File</attribute>
+      </item>
+  </section>
+
+  <section>
+    <item>
+      <attribute name="label">Quit</attribute>
+      <attribute name="action">app.quit</attribute>
+    </item>
+  </section>
+
+  </menu>
+</interface>
