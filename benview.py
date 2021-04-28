@@ -2,7 +2,8 @@
 
 import gi
 import sys
-from benparser import parse_torrent
+from benparser import parse_torrent, get_printable_torrent
+import json
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
@@ -54,7 +55,8 @@ class MyWindow(Gtk.ApplicationWindow):
                 if not parsed:
                     print("Something went wrong...")
                 else:
-                    print(parsed.poValue)
+                    printableDict = get_printable_torrent(parsed)
+                    print(json.dumps(printableDict, indent=4))
             except GObject.GError as e:
                 print(f"File dialog error: {e.message}")
 
